@@ -36,13 +36,14 @@ with open('./data/data1.txt', 'r') as file:
         comments[id] = comment
 
         values = tokens[1:1+len(elements)]
-        print(values)
 
         for n, value in enumerate(values):
             element = elements[n]
             data_by_id[id][element] = float(value)
             data_by_element[element][id] = float(value)
 
+
+# example 1
 
 for id in ids:
     comment = comments[id]
@@ -54,6 +55,8 @@ for id in ids:
         print("\t{}: {}".format(element, value))
 
 print()
+
+# example 2
 
 for element in elements:
     print(element)
