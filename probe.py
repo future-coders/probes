@@ -50,11 +50,17 @@ for id in ids:
     line = lines[id]
     print("{} - {} [{}]".format(id, line, comment))
 
+    values = data_by_id[id].values()
+    total = sum(values)
+    print("\tSUM: {}".format(total))
+
+    print()
+
     for element in elements:
         value = data_by_id[id][element]
         print("\t{}: {}".format(element, value))
 
-print()
+    print()
 
 # example 2
 
@@ -71,3 +77,5 @@ for element in elements:
 
     avg = float(sum(values))/len(values)
     print("\tAVG: {}".format(avg))
+
+    print()
