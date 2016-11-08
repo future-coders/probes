@@ -32,7 +32,7 @@ with open('./data/data1.txt', 'r') as file:
         line = tokens[-2]
         lines[id] = line
 
-        comment = " ".join(tokens[-3:])
+        comment = " ".join(tokens[1+len(elements)+1:])
         comments[id] = comment
 
         values = tokens[1:1+len(elements)]
