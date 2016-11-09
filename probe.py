@@ -52,13 +52,13 @@ for id in ids:
 
     values = data_by_id[id].values()
     total = sum(values)
-    print("\tSUM: {}".format(total))
+    print("\tSUM: {0:3f}".format(total))
 
     print()
 
     for element in elements:
         value = data_by_id[id][element]
-        print("\t{}: {}".format(element, value))
+        print("\t{0}: {1:.3f}".format(element, value))
 
     print()
 
@@ -70,12 +70,12 @@ for element in elements:
     values = data_by_element[element].values()
 
     min_value = min(values)
-    print("\tMIN: {}".format(min_value))
+    print("\tMIN: {0:.3f}".format(min_value))
 
     max_value = max(values)
-    print("\tMAX: {}".format(max_value))
+    print("\tMAX: {0:.3f}".format(max_value))
 
     avg = float(sum(values))/len(values)
-    print("\tAVG: {}".format(avg))
+    print("\tAVG: {0:.3f}".format(avg))
 
     print()
